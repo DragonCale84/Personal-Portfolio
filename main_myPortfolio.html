@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ethan Soong - Web Developer and Programmer</title>
+        <link rel="stylesheet" href="./Other Information/CSS/portfolio-website.css">
+        <script>
+            // JavaScript functionalities
+            function validateForm() {
+                // Basic validation
+                if (document.forms[0].pword.value === "password") {
+                    alert('Password cannot be password.');
+                    e.preventDefault(); // prevents a default value from getting sent
+                    return false; // returns a false value
+                }
+                
+                if (document.forms[0].firstName.value == "") {
+                    alert('First name cannot be empty!');
+                    e.preventDefault();
+                    return false;
+                }
+                
+                if (document.forms[0].lastName.value == "") {
+                    alert('Last name cannot be empty!');
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (document.forms[0].mobile.value == "") {
+                    alert('Please enter a valid mobile number.');
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (document.forms[0].message.value == "") {
+                    alert('Please enter a valid message to be sent.');
+                    e.preventDefault();
+                    return false;
+                }
+                
+                if (document.forms[0].email.value = "") {
+                    alert('Email cannot be empty!');
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (document.forms[0].country.value = "") {
+                    alert('Please select a country of residence!');
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Input validation
+                if (document.forms[0].pword.value.length < 8 || document.forms[0].pword.value.length > 24) {
+                    alert('Passwords have to be between 8 to 24 characters!')
+                    return false;
+                }
+
+                if (document.forms[0].message.value.length < 8) {
+                    alert('Please enter a valid message to be sent.');
+                    return false;
+                }
+
+                /* Email validation (non-functional but applicable)
+                if (!document.forms[0].email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+                    alert('Please enter a valid e-mail address');
+                    return false;
+                }
+                */
+
+                // If all values are validated, return true and submit the form
+                alert('Thank you for your feedback! Your form has been received...')
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <!--Page Layout Background for the header-->
+        <header>    
+            <div class="background"></div>
+        </header>
+
+        
+        <!--Off screen hamburger menu which goes before navigation-->
+        <div class="off-screen-menu">
+            <ul class="off-screen">
+                <li class="link"><a href="#homepage" id="home_link2" style="margin-top:10px;">Home</a></li>
+                <li class="link"><a href="#about_me" id="about_link2">About Me</a></li>
+                <li class="link"><a href="#skills" id="skills_link2">Skills</a></li>
+                <li class="link"><a href="#projects" id="pfolio_link2">Projects/Portfolio</a></li>
+                <li class="link"><a href="#contacts" id="contacts_link2">Contacts</a></li>
+            </ul>
+        </div>
+        <!--Nav links for website navigation-->
+        <nav class="scrolled">
+            <div class="container">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="nav_container">
+                    <div class="logo" id="typing_effect">
+                        <h1 class="logo">Ethan Soong's Personal Portfolio</h2>
+                    </div>
+                    <ul class="nav_link">
+                        <li class="link"><a href=#homepage id="home_link">Home</a></li>
+                        <li class="link"><a href=#about_me id="about_link">About Me</a></li>
+                        <li class="link"><a href=#skills id="skills_link">My Skills</a></li>
+                        <li class="link"><a href=#projects id="pfolio_link">Projects/Portfolio</a></li>
+                        <li class="link"><a href=#contacts id="contacts_link">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>    
+        </nav>
+
+
+        <!--Home Page-->
+        <div id="homepage">
+            <main id="home">
+                <div id="home-content">
+                    <h1>Web Developer and <span id="color2">Software Programmer</span></h1>
+                    <p>I'm a web developer who aspires to build robust, accessible, and user-friendly digital softwares and browsers for my customers and audiences</p>
+                    <a href="#about_me" id="home-button">Find Out More About Me!</a>
+                </div>
+            </main>
+        </div>
+
+
+        <!--About Me-->
+        <section id="about_me" class="about">
+            <div class="container">
+                <h2 class="about-header">About Me</h2>
+                <div class="content">
+                    <div class="text">
+                        <p>I'm a dedicated programmer and passionate web developer who loves transforming my codes and product ideas into functional browser experiences for my users.</p><br>
+                        <p>When I'm away from coding, you can usually find me exploring countless ways and unique methods to make my web browsers more user-friendly towards for my needing customers.</p>
+                    </div>
+                </div>
+                <div class="about_image">
+                    <div id="picture_profile">
+                        <img src="./Images/myPicture.png" alt="My Profile Picture" style="margin-top:18px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <h3>Frontend Development</h3>
+                    <p>React, Vue.js, HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Python, PHP, Database Design</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Adobe Creative Suite, User Research</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <h3>Mobile Development</h3>
+                    <p>React Native, Flutter, iOS, Android</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!--My Skills-->
+        <section id="skills">
+            <div class="container">
+                <h2 class="about-header">My Portfolio of Skills</h2>
+                <!--Grid goes here-->
+                <div class="skills-container">
+                    <div class="skills-grid card">
+                        <h3 style="padding-bottom:15px;">Frontend Development</h3>
+                        <p>Semantics of HTML5, CSS, JavaScript</p>
+                        <p>This project, i.e. not limited to, involves making a personal<br>portfolio of my website and display of skills</p>
+                        <a></a>
+                    </div>
+                    <div class="skills-grid card">
+                        <h3 style="padding-bottom:15px">Structural Programming</h3>
+                        <p>Python, Java, Oracle Database Design</p>
+                        <p>This showcases my Java or Python projects which involves<br>crafting a course registration from scratch.</p>
+                        <a></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Projects/Portfolio-->
+        <section id="projects">
+            <div>
+                <div>Frontend Development - HTML</div>
+                <div>
+                    <h3>Personal Portfolio</h3>
+                    <p>Full-stack e-commerce solution with React frontend and Node.js backend, featuring real-time inventory management and secure payment processing.</p>
+                </div>
+                <div>Backend Development - Python</div>
+                <div>
+                    <h3>Course Registration Systemr</h3>
+                    <p>Team productivity app with real-time collaboration features, drag-and-drop interface, and comprehensive project tracking capabilities.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Contacts-->
+        <section id="contacts">
+            <div class="container forms">
+                <h2>Contact Us!</h2>
+                <p><span style="font-weight:bold">Ready to bring your ideas to life?</span> Sign up now and drop us a message! We would really love to hear about you.<br>Your time and feedback is valuable in helping us improve. Thanks!</p>
+                <!--Forms start here-->
+                <form action="./Other Information/submitted-form.html" method="post" onsubmit="return validateForm();">
+                    <fieldset>
+                    <legend>Contact Information</legend>
+                        <div>
+                            <label for="firstName"><span class="bold_std">F</span>irst Name: </label>
+                            <input type="text" name ="firstName" id="firstName" required accesskey="f" tabindex="1">
+                        </div>
+                        <div>
+                            <label for="lastName"><span class="bold_std">L</span>ast Name: </label>
+                            <input type="text" name ="lastName" id="lastName" required accesskey="l" tabindex="1">
+                        </div>
+                        <div>
+                            <label for="mobile"><span class="bold_std">M</span>obile Number: </label>
+                            <input type="tel" name="mobile" id="mobile" required accesskey="n" tabindex="2">
+                        </div>
+                        <div>
+                            <label for="email"><span class="bold_std">E</span>-mail: </label>
+                            <input type="email" name="email" id="email" required accesskey="e" tabindex="3">
+                        </div>
+                        <div>
+                            <label for="pword"><span class="bold_std">P</span>assword: </label>
+                            <input type="password" name="pword" id="pword" required accesskey="p" tabindex="4" minlength="8">
+                        </div>
+                        <div>
+                            <label for="country"><span class="bold_std">C</span>ountry of Residence: </label>
+                            <select size="1" name="country" class="country_dropdwn" id="country" required acceskey="c" tabindex="5">
+                                <option>Select your country of residence</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Vietnam">Vietmam</option>
+                                <option value="Brunei">Brunei</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Laos">Laos</option>
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Timor-Leste">Timor-Leste</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message"><span class="bold_std">M</span>essage: </label>
+                            <textarea name="message" id="message" required accesskey="m" tabindex="6" rows="4" cols="40" minlength="20"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="button" tabindex="7" accesskey="s">Submit Details</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        
+
+        <!--Footer for extra information and copyright reserves-->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Ethan Soong. All rights are reserved. | Built with lots of passion and love in coding ☕</p>
+            </div>
+        </footer>
+        <script>
+            const hamMenu = document.querySelector('.ham-menu');
+            const offScreenMenu = document.querySelector('.off-screen-menu');
+
+            hamMenu.addEventListener('click', () => {
+                hamMenu.classList.toggle("active");
+                offScreenMenu.classList.toggle("active");
+            })
+        </script>
+    </body>
+</html>
