@@ -1,3 +1,5 @@
+<!--Main site for personal portfolio-->
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -5,76 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ethan Soong - Web Developer and Programmer</title>
         <link rel="stylesheet" href="./Other Information/CSS/portfolio-website.css">
-        <script>
-            // JavaScript functionalities
-            function validateForm() {
-                // Basic validation
-                if (document.forms[0].pword.value === "password") {
-                    alert('Password cannot be password.');
-                    e.preventDefault(); // prevents a default value from getting sent
-                    return false; // returns a false value
-                }
-                
-                if (document.forms[0].firstName.value == "") {
-                    alert('First name cannot be empty!');
-                    e.preventDefault();
-                    return false;
-                }
-                
-                if (document.forms[0].lastName.value == "") {
-                    alert('Last name cannot be empty!');
-                    e.preventDefault();
-                    return false;
-                }
-
-                if (document.forms[0].mobile.value == "") {
-                    alert('Please enter a valid mobile number.');
-                    e.preventDefault();
-                    return false;
-                }
-
-                if (document.forms[0].message.value == "") {
-                    alert('Please enter a valid message to be sent.');
-                    e.preventDefault();
-                    return false;
-                }
-                
-                if (document.forms[0].email.value = "") {
-                    alert('Email cannot be empty!');
-                    e.preventDefault();
-                    return false;
-                }
-
-                if (document.forms[0].country.value = "") {
-                    alert('Please select a country of residence!');
-                    e.preventDefault();
-                    return false;
-                }
-
-                // Input validation
-                if (document.forms[0].pword.value.length < 8 || document.forms[0].pword.value.length > 24) {
-                    alert('Passwords have to be between 8 to 24 characters!')
-                    return false;
-                }
-
-                if (document.forms[0].message.value.length < 8) {
-                    alert('Please enter a valid message to be sent.');
-                    return false;
-                }
-
-                /* Email validation (non-functional but applicable)
-                if (!document.forms[0].email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-                    alert('Please enter a valid e-mail address');
-                    return false;
-                }
-                */
-
-                // If all values are validated, return true and submit the form
-                alert('Thank you for your feedback! Your form has been received...')
-                return true;
-            }
-        </script>
+        <script src="./Other Information/JavaScript/portfolio-validation.js"></script>
     </head>
+
     <body>
         <!--Page Layout Background for the header-->
         <header>    
@@ -131,7 +66,7 @@
         <!--About Me-->
         <section id="about_me" class="about">
             <div class="container">
-                <h2 class="about-header">About Me</h2>
+                <h2 class="header">About Me</h2>
                 <div class="content">
                     <div class="text">
                         <p>I'm a dedicated programmer and passionate web developer who loves transforming my codes and product ideas into functional browser experiences for my users.</p><br>
@@ -147,46 +82,21 @@
         </section>
 
 
-        <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title fade-in">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card fade-in">
-                    <h3>Frontend Development</h3>
-                    <p>React, Vue.js, HTML5, CSS3, JavaScript</p>
-                </div>
-                <div class="skill-card fade-in">
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Python, PHP, Database Design</p>
-                </div>
-                <div class="skill-card fade-in">
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe Creative Suite, User Research</p>
-                </div>
-                <div class="skill-card fade-in">
-                    <h3>Mobile Development</h3>
-                    <p>React Native, Flutter, iOS, Android</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
         <!--My Skills-->
         <section id="skills">
             <div class="container">
-                <h2 class="about-header">My Portfolio of Skills</h2>
-                <!--Grid goes here-->
+                <h2 class="header" style="padding:20px;">My Portfolio of Skills</h2>
+                <!--Skills flexboxes goes here-->
                 <div class="skills-container">
+                    <!--Possible Git links to each project initiated-->
                     <div class="skills-grid card">
-                        <h3 style="padding-bottom:15px;">Frontend Development</h3>
+                        <h3 style="padding-bottom:15px; color:black; font-weight:bold;">Structural Programming</h3>
                         <p>Semantics of HTML5, CSS, JavaScript</p>
                         <p>This project, i.e. not limited to, involves making a personal<br>portfolio of my website and display of skills</p>
                         <a></a>
                     </div>
                     <div class="skills-grid card">
-                        <h3 style="padding-bottom:15px">Structural Programming</h3>
+                        <h3 style="padding-bottom:15px; color:black; font-weight:bold;">Web Development</h3>
                         <p>Python, Java, Oracle Database Design</p>
                         <p>This showcases my Java or Python projects which involves<br>crafting a course registration from scratch.</p>
                         <a></a>
@@ -194,28 +104,34 @@
                 </div>
             </div>
         </section>
-
-
+        
+        
         <!--Projects/Portfolio-->
-        <section id="projects">
-            <div>
-                <div>Frontend Development - HTML</div>
-                <div>
-                    <h3>Personal Portfolio</h3>
-                    <p>Full-stack e-commerce solution with React frontend and Node.js backend, featuring real-time inventory management and secure payment processing.</p>
-                </div>
-                <div>Backend Development - Python</div>
-                <div>
-                    <h3>Course Registration Systemr</h3>
-                    <p>Team productivity app with real-time collaboration features, drag-and-drop interface, and comprehensive project tracking capabilities.</p>
+        <section id="projects" class="section">
+            <div class="container2">
+                <div style="margin-left:13%;">
+                    <div><h2 class="header2">My Projects and Overall Portfolio</h2></div>
+                    <div class="project-container">
+                        <div id="content_project">
+                            <h3 style="font-size:1.4em; text-align:center; color:black">Frontend Development - HTML, CSS and JavaScript</h3>
+                            <h3 style="font-size:1.2em; text-align:center"><a href="https://github.com/DragonCale84/Personal-Portfolio.git" class="skill_link"><h3 style="padding-bottom:15px;">Course Registration System</h3></a></h3>
+                            <p>A solo project that was worked on for weeks after weeks in achieving<br>its final phase, including the feature of cross-platform compatibilities</p>
+                        </div>
+                        <div id="content_project">
+                            <h3 style="font-size:1.4em; text-align:center; color:black">Backend Development - Python</h3>
+                            <h3 style="font-size:1.2em; text-align:center"><a href="https://github.com/DragonCale84/Course-Registration-System.git" class="skill_link"><h3 style="padding-bottom:15px;">Personal Portfolio</h3></a></h3>
+                            <p>A collaborative project in constructing a course registration system for student usability in educational institutions<br></p>
+                        </div>
+                        <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+                    </div>
                 </div>
             </div>
         </section>
 
 
         <!--Contacts-->
-        <section id="contacts">
-            <div class="container forms">
+        <section id="contacts" class="section">
+            <div class="forms">
                 <h2>Contact Us!</h2>
                 <p><span style="font-weight:bold">Ready to bring your ideas to life?</span> Sign up now and drop us a message! We would really love to hear about you.<br>Your time and feedback is valuable in helping us improve. Thanks!</p>
                 <!--Forms start here-->
@@ -279,14 +195,7 @@
                 <p>&copy; 2025 Ethan Soong. All rights are reserved. | Built with lots of passion and love in coding ☕</p>
             </div>
         </footer>
-        <script>
-            const hamMenu = document.querySelector('.ham-menu');
-            const offScreenMenu = document.querySelector('.off-screen-menu');
-
-            hamMenu.addEventListener('click', () => {
-                hamMenu.classList.toggle("active");
-                offScreenMenu.classList.toggle("active");
-            })
-        </script>
+        <script src="./Other Information/JavaScript/portfolio-ham-menu.js"></script>
     </body>
+
 </html>

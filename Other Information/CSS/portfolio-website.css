@@ -1,4 +1,4 @@
-/* CSS Styles go here */
+/* CSS Styles for website styling */
 
 /* Website Structure */
 * { /*overall structure (applies to the entire webpage)*/
@@ -17,9 +17,18 @@ section {
     position: relative;
 }
 
+.section {
+    padding:0;
+    position:relative;
+}
 
 .container {
     max-width:1200vh; margin:auto; padding:20px;
+}
+
+.container2 {
+    max-width:1200vh; margin-bottom:0; margin:auto; padding:20px;
+    background-color:#b2ed29; padding-bottom:0;
 }
 
 /* For W3C standard compliance purposes, initials of forms must be bolded */
@@ -37,93 +46,104 @@ section {
 
 /* Navigation Section */
 #nav_container {
-    display:flex;
+    display:flex; margin:auto;
     justify-content:space-between; align-items:center;
 }
 
-            /* Home Section */
-            #home { /*home container element*/
-                display:flex; align-items:center; justify-content:center;
-                text-align:center; color:#FFFFFFDA; position:relative;
-                min-height:100vh;
-            }
+.links {
 
-            #home h1 { /*gives h1 a fade-in effect*/
-                font-size:3rem; margin-top:17vh; opacity:0; /*configures font-size for h1 during animation*/
-                animation-name:fadeInUpwards; animation-duration:1s; 
-                animation-timing-function:ease; animation-fill-mode:forwards;
-                animation-iteration-count:1;
-            }
-            
-            #home p { /*gives the paragraph text a fade-in effect*/
-                font-size: 1.5rem; opacity: 0; /*configures font-size for paragraph text during animation*/
-                margin-bottom: 30px; margin-left: 35px; margin-right: 35px; margin-top:23px;
-                animation-name: fadeInUpwards; animation-duration: 1s;
-                animation-timing-function: ease; animation-delay: 0.3s; 
-                animation-fill-mode: forwards; animation-iteration-count: 1;
-            }
-            
-            #color2 { /*Sets the color preset for a span within the div element of the homepage*/
-                color:#00FFFFDC;
-            }
-
-            #home-content {
-                z-index:1; /*ensures the content always stays over the background*/
-            }
-
-            /* Transition button at the home section */
-            #home-button {
-                display:inline-block; background-color: #ECD7F135;
-                color:white; border-radius:35px; font-weight:bold;
-                text-decoration:none; padding:15px; margin:13px;
-                /* Transition property shorthand order: transition-duration, transition-timing-function, 
-                transition-delay, and transition-behavior */
-                transition-property:all; transition-duration:0.3s; transition-timing-function:ease;
-                /* Border property shorthand order: border-width, border-style, border-color */
-                border-width:4px; border-style:solid; border-color:#FFEDED82; opacity:0; 
-                /* Animation property shorthand order: animation-name, animation-duration, animation-timing-function,
-                animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state */
-                animation-name:fadeInUpwards; animation-duration:1s; animation-delay:0.6s; animation-fill-mode:forwards;
-            }
-
-            /* A hover pseudo-class for the button at the home section */
-            #home-button:hover {
-                background-color:#ECD7F135;
-                transform: translateY(-2px);
-                box-shadow:0 10px 40px #0000003C /*shorthand for: horizontal offset, vertical offset, blur radius, and color*/
-            }
-
-            /* Provided keyframe animations to create a fading button effect after animation reaches end */
-            @keyframes fadeInUpwards {
-                100% {
-                    opacity:1; transform:translateY(0);
-                }
-            }
-
-            /* About Me Section */
-            .about {
-                background-color:#00bfff;
-            }
-            
-            .about-header {
-                font-size: 2.5rem;
-                text-align:center;
-                margin-bottom:10px;
-                color: black;
-            }
-
-.about_image {
-    text-align: center;
 }
 
-#picture_profile {
-            width:300px;
-            height:300px;
-            border-radius:50%;
-            border:5px solid white;
-            position:absolute; top:35vh; right:21vh;
-            transition: transform 0.3s ease;
+/* Home Section */
+#home { /*home container element*/
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; color:#FFFFFFDA; position:relative;
+    min-height:100vh;
+}
+
+#home h1 { /*gives h1 a fade-in effect*/
+    font-size:3rem; margin-top:17vh; opacity:0; /*configures font-size for h1 during animation*/
+    animation-name:fadeInUpwards; animation-duration:1s; 
+    animation-timing-function:ease; animation-fill-mode:forwards;
+    animation-iteration-count:1;
+}
+            
+#home p { /*gives the paragraph text a fade-in effect*/
+    font-size: 1.5rem; opacity: 0; /*configures font-size for paragraph text during animation*/
+    margin-bottom: 30px; margin-left: 35px; margin-right: 35px; margin-top:23px;
+    animation-name: fadeInUpwards; animation-duration: 1s;
+    animation-timing-function: ease; animation-delay: 0.3s; 
+    animation-fill-mode: forwards; animation-iteration-count: 1;
+}
+            
+#color2 { /*Sets the color preset for a span within the div element of the homepage*/
+    color:#00FFFFDC;
+}
+
+#home-content {
+    z-index:1; /*ensures the content always stays over the background*/
+}
+
+/* Transition button at the home section */
+#home-button {
+    display:inline-block; background-color: #ECD7F135;
+    color:white; border-radius:35px; font-weight:bold;
+    text-decoration:none; padding:15px; margin:13px;
+    /* Transition property shorthand order: transition-duration, transition-timing-function, 
+    transition-delay, and transition-behavior */
+    transition-property:all; transition-duration:0.3s; transition-timing-function:ease;
+    /* Border property shorthand order: border-width, border-style, border-color */
+    border-width:4px; border-style:solid; border-color:#FFEDED82; opacity:0; 
+    /* Animation property shorthand order: animation-name, animation-duration, animation-timing-function,
+    animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state */
+    animation-name:fadeInUpwards; animation-duration:1s; animation-delay:0.6s; animation-fill-mode:forwards;
+}
+
+/* A hover pseudo-class for the button at the home section */
+#home-button:hover {
+    background-color:#ECD7F135;
+    transform: translateY(-2px);
+    box-shadow:0 10px 40px #0000003C /*shorthand for: horizontal offset, vertical offset, blur radius, and color*/
+}
+
+/* Provided keyframe animations to create a fading button effect after animation reaches end */
+@keyframes fadeInUpwards {
+    100% {
+        opacity:1; transform:translateY(0);
+    }
+}
+
+/* About Me Section */
+.about {
+    background-color:#00bfff;
+}
+            
+.header {
+    font-size: 2.5rem;
+    text-align:center;
+    margin-bottom:10px;
+    color: black;
         }
+
+.header2 {
+    font-size: 2.5rem;
+    text-align:center;    
+    color: black;
+}
+
+.about_image {
+    text-align: center; position:relative; z-index:35;
+}
+
+/* Profile picture */
+#picture_profile {
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    border:5px solid white;
+    position:absolute; top:-60vh; right:10vh;
+    transition: transform 0.3s ease; z-index:35;
+}
         
 .content {
     display: grid;
@@ -132,125 +152,164 @@ section {
     align-items: center;
 }
 
-        .text {
-            font-size:1.25rem;
-            font-family:'Times New Roman', sans-serif;
-            line-height:1.9;
-            margin-left:10px;
-        }
+.text {
+    font-size:1.25rem;
+    font-family:'Times New Roman', sans-serif;
+    line-height:1.9;
+    margin-left:10px;
+}
 
-            /* Skills Section */
-            #skills {
-            background: #da9d24;
-        }
+/* Skills Section */
+#skills {
+    background: #da9d24;
+}
 
-        .skills-container {
-            display:flex;
-            justify-content:space-between;
-        }
+/* Pseudo-classes for the skill links */
+.skills-container {
+    display:flex;
+    justify-content:space-between;
+}
 
-        .skills-grid {
-            writing-mode:horizontal-tb;
-            flex-direction:row;
-        }
+.skills-grid {
+    writing-mode:horizontal-tb;
+    flex-direction:row;
+}
 
-        .card {
-            background-color:#40caca;
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            border:4px solid blueviolet;
-        }
+.skill_link:link {
+    color:white;
+}
 
-            /* Projects/ Portfolios Section */
-            /* Contacts Section */
+.skill_link:visited {
+    color:purple;
+}
 
-            /* Footer */
-            footer {
-                background: #333; /*shorthand for #333333 in hex color*/
-                color: #FFF; /*color: white*/
-                text-align: center; /*aligns the text in the content to the center*/
-                padding: 30px 0; /*shorthand for (top-bottom) and (left-right) directions if two are used*/
-            }
+.skill_link:hover {
+    text-decoration:none;
+    color:blue;
+}
+        
+.skill_link:active {
+    text-decoration:none;
+    color:#0404ab;
+}
 
-            /* Pseudo-classes for animation */
-            .button {
-                padding:4.5px; font-size:normal; font:Arial;
-                animation-name:enlarge; animation-duration:2s;
-                animation-timing-function:ease-in-out; animation-delay:0.5s;
-                animation-iteration-count:infinite;
-                animation-play-state:paused;
-            }
+/* Flex item design */
+.card {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: white;
+    background-color:#40caca;
+    border:4px solid blueviolet;
+}
 
-            .button:hover {
-                animation-play-state:initial;
-            }
+/* Projects/ Portfolios Section */
+.project-container {
+    display:flex;
+    flex-direction:row;
+    writing-mode:horizontal-tb;
+    justify-content:space-between;
+    gap:20%;
+    margin-top:5%;
+}
 
-            .button:not(hover) {
-                animation-direction:normal;
-            }
+#content_project {
+    width: 250%;
+    height: 200%;
+    background-color:#40caca;
+    margin-left:15px;
+    color: white;
+    border:4px solid blueviolet;
+    font-size: 0.8em;
+    border-radius:15px;
+    padding:20px;
+}
 
-            .button:hover::after {
-                animation-direction:normal;
-                animation-play-state:paused;
-            }
+/* Footer */
+footer {
+    background: #333; /*shorthand for #333333 in hex color*/
+    color: #FFF; /*color: white*/
+    text-align: center; /*aligns the text in the content to the center*/
+    padding: 30px 0; /*shorthand for (top-bottom) and (left-right) directions if two are used*/
+}
 
-            @keyframes enlarge {
-                50% {
-                    border-radius:0; scale:1.25;
-                }
-                90% {
-                    border-radius:50%; scale:1.15;
-                }
-                100% {
-                    animation-timing-function:ease;
-                    animation-play-state:normal;
-                }
-            }
+/* Pseudo-classes for animation */
+.button {
+    padding:4.5px; font-size:normal; font:Arial;
+    animation-name:enlarge; animation-duration:2s;
+    animation-timing-function:ease-in-out; animation-delay:0.5s;
+    animation-iteration-count:infinite;
+    animation-play-state:paused;
+}
 
-            /* Pseudo-classes for links */
-            .link {
-                padding:4.5px; font-size:normal; font:Arial;
-                animation-name:links; animation-duration:1.7s;
-                animation-timing-function:ease;
-                animation-play-state:paused;
-            }
+.button:hover {
+    animation-play-state:initial;
+}
 
-            .link:hover {
-                animation-play-state:running;
-                animation-iteration-count:infinite;
-            }
+.button:not(hover) {
+    animation-direction:normal;
+}
 
-            @keyframes links {
-                50% {
-                    border-radius:0; scale:1.14;
-                    animation-fill-mode:forwards;
-                }
-                100% {
-                    animation-timing-function:ease;
-                    animation-play-state:paused;
-                }
-            }
+.button:hover::after {
+    animation-direction:normal;
+    animation-play-state:paused;
+}
 
-            /* Nav link basic pseudo claasses */
-            ul > li > a:visited {
-                color:black;
-            }
+@keyframes enlarge {
+    50% {
+        border-radius:0; scale:1.25;
+    }
+    90% {
+        border-radius:50%; scale:1.15;
+    }
+    100% {
+        animation-timing-function:ease;
+        animation-play-state:normal;
+    }
+}
 
-            ul > li > a:hover {
-                color:white;
-            }
+/* Pseudo-classes for links */
+.link {
+    padding:4.5px; font-size:normal; font:Arial;
+    animation-name:links; animation-duration:1.7s;
+    animation-timing-function:ease;
+    animation-play-state:paused;
+}
 
-            ul > li > a:focus {
-                color:black;
-            }
+.link:hover {
+    animation-play-state:running;
+    animation-iteration-count:infinite;
+}
+
+@keyframes links {
+    50% {
+        border-radius:0; scale:1.14;
+        animation-fill-mode:forwards;
+    }
+    100% {
+        animation-timing-function:ease;
+        animation-play-state:paused;
+    }
+}
+
+/* Nav link basic pseudo claasses */
+ul > li > a:visited {
+    color:black;
+}
+
+ul > li > a:hover {
+    color:white;
+}
+
+ul > li > a:focus {
+    color:black;
+}
             
-            ul > li > a:active {
-                color:gray;
-            }
+ul > li > a:active {
+    color:gray;
+}
 
             /* Navigation CSS */
             nav {
@@ -268,6 +327,7 @@ section {
                 margin-left:4px;
             }
 
+            /* Contacts Section */
             /* Contact Us form */
             .forms {
                 background-color:#EAEAEA; font-family:Arial, sans-serif;
@@ -275,7 +335,7 @@ section {
             }
 
             .country_dropdwn {
-                margin-top:16px; margin-left:-5px;
+                margin-top:16px; margin-left:-5px; width:42vh;
             }
 
             select {
@@ -344,7 +404,7 @@ section {
             /* Nav Link */
             .nav_link {
                 display:flex; position:absolute; list-style-type:none;
-                top:6.5vh; left:90vh;
+                top:6.5vh; left:90vh; margin-right:auto; padding-right:auto;
             }
 
             /* Home Link */
@@ -370,7 +430,7 @@ section {
             #home_link2 {
                 text-decoration:none; color:black; font-weight:bold;
                 position:relative; padding-right:30px; width:max-content;
-                cursor:pointer;
+                cursor:pointer; margin-left:5%;
             }
 
             #home_link2::after {
@@ -390,7 +450,7 @@ section {
             #about_link {
                 text-decoration:none; color:black; font-weight:bold;
                 position:relative; padding-right:30px; width:max-content;
-                cursor:pointer;
+                cursor:pointer; margin-left:5%;
             }
 
             #about_link::after {
@@ -468,7 +528,7 @@ section {
             #pfolio_link {
                 text-decoration:none; color:black; font-weight:bold;
                 position:relative; padding-right:30px; width:max-content;
-                cursor:pointer;
+                cursor:pointer; margin-left:5%;
             }
 
             #pfolio_link::after {
@@ -510,153 +570,286 @@ section {
                 cursor:pointer;
             }
 
-            /* Pseudo classes to provide the underlining effect for each link in the contacts */
-            #contacts_link::after { /*prepares for start of underline effect*/
-                content:"";
-                bottom:-5px;
-                height:4px; width:72%;
-                background-color:black; left:-1px;
-                transition:0.3s; position:absolute;
-                transition-timing-function:ease-in-out; transform:scaleX(0);
-            }
+/* Pseudo classes to provide the underlining effect for each link in the contacts */
+#contacts_link::after { /*prepares for start of underline effect*/
+    content:"";
+    bottom:-5px;
+    height:4px; width:72%;
+    background-color:black; left:-1px;
+    transition:0.3s; position:absolute;
+    transition-timing-function:ease-in-out; transform:scaleX(0);
+}
             
-            #contacts_link:hover::after { /*when hovered over after, underline effect takes place */
-                transform:scaleX(1);
-            }
+#contacts_link:hover::after { /*when hovered over after, underline effect takes place */
+    transform:scaleX(1);
+}
 
-            #contacts_link2 {
-                text-decoration:none; color:black; font-weight:bold;
-                position:relative; padding-right:30px; width:max-content;
-                cursor:pointer;
-            }
+#contacts_link2 {
+    text-decoration:none; color:black; font-weight:bold;
+    position:relative; padding-right:30px; width:max-content;
+    cursor:pointer;
+}
 
-            /* Pseudo classes to provide the underlining effect for each link in the contacts */
-            #contacts_link2::after { /*prepares for start of underline effect*/
-                content:"";
-                bottom:-5px;
-                height:4px; width:72%;
-                background-color:black; left:-1px;
-                transition:0.3s; position:absolute;
-                transition-timing-function:ease-in-out; transform:scaleX(0);
-            }
+/* Pseudo classes to provide the underlining effect for each link in the contacts */
+#contacts_link2::after { /*prepares for start of underline effect*/
+    content:"";
+    bottom:-5px;
+    height:4px; width:72%;
+    background-color:black; left:-1px;
+    transition:0.3s; position:absolute;
+    transition-timing-function:ease-in-out; transform:scaleX(0);
+}
             
-            #contacts_link2:hover::after { /*when hovered over after, underline effect takes place */
-                transform:scaleX(1.1);
-                left:5px;
-            }
+#contacts_link2:hover::after { /*when hovered over after, underline effect takes place */
+    transform:scaleX(1.1);
+    left:5px;
+}
 
-            /* Hambuger menu */
-            .ham-menu {
-                height:50px; width:50px;
-                margin-left:auto; position:absolute;
-                top:5vh; right:3vh;
-            }
+/* Hambuger menu */
+.ham-menu {
+    height:50px; width:50px;
+    margin-left:auto; position:absolute;
+    top:5vh; right:3vh;
+}
 
-            .ham-menu span {
-                height:5px;
-                width:100%;
-                z-index:999;
-                background-color:purple;
-                border-radius:25px;
-                position:absolute;
-                top:50%; left:50%;
-                transform: translate(-50%, -50%);
-                transition: 0.3s ease;
-            }
+.ham-menu span {
+    height:5px;
+    width:100%;
+    z-index:999;
+    background-color:purple;
+    border-radius:25px;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
 
-            .ham-menu span:nth-child(1) {
-                top:25%;
-            }
+.ham-menu span:nth-child(1) {
+    top:25%;
+}
 
-            .ham-menu span:last-child {
-                top:75%;
-            }
+.ham-menu span:last-child {
+    top:75%;
+}
 
-            .ham-menu.active span:nth-child(1) {
-                top:50%;
-                transform: translate(-50%, -50%) rotate(45deg);
-                color:black;
-            }
+.ham-menu.active span:nth-child(1) {
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    color:black;
+}
             
-            .ham-menu.active span:nth-child(2) {
-                opacity:0;
-            }
+.ham-menu.active span:nth-child(2) {
+    opacity:0;
+}
 
-            .ham-menu.active span:nth-child(3) {
-                top:50%;
-                transform: translate(-50%, -50%) rotate(-47.5deg);
-            }
+.ham-menu.active span:nth-child(3) {
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-47.5deg);
+}
 
-            /* Off-screen menu for the hamburger menu */
-            .off-screen-menu {
-                background-color:#a37bdf;
-                height:100vh;
-                width:100%;
-                max-width:370px;
-                position:fixed;
-                top:0; z-index:100;
-                overflow-x: hidden;
-                right:-450px; /* Pushes the off-screen menu from visibility temporarily */
+/* Off-screen menu for the hamburger menu */
+.off-screen-menu {
+    background-color:#a37bdf;
+    height:100vh;
+    width:100%;
+    max-width:370px;
+    position:fixed;
+    top:0; z-index:100;
+    overflow-x: hidden;
+    right:-450px; /* Pushes the off-screen menu from visibility temporarily */
 
-                /* To align the off-screen menu as a flex item */
-                display:flex;
-                margin-left:auto;
-                flex-direction:column;
-                justify-content:center;
-                align-items:center;
-                text-align:center;
-                font-size:3rem;
-                transition: 0.3s ease;
-                cursor:pointer;
-            }
+    /* To align the off-screen menu as a flex item */
+    display:flex;
+    margin-left:auto;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:3rem;
+    transition: 0.3s ease;
+    cursor:pointer;
+}
 
-            /* While off-scree menu is active */
-            .off-screen-menu.active {
-                right:0;
-            }
+/* While off-scree menu is active */
+.off-screen-menu.active {
+    right:0;
+}
 
-            .off-screen-span {
-                font-size:1.1em;
-            }
+.off-screen-span {
+    font-size:1.1em;
+}
 
-            .off-screen-menu ul li {
-                color:#4400ff;
-                font-size:0.5em;
-                margin-top:12px;
-            }
+.off-screen-menu ul li {
+    color:#4400ff;
+    font-size:0.5em;
+    margin-top:12px;
+}
 
-            .off-screen li {
-                list-style-type:none;
-                margin-bottom:10px;
-            }
+.off-screen li {
+    list-style-type:none;
+    margin-bottom:10px;
+}
 
-            /* Typewriter Effect */
-            #typing_effect h1 {
-                font-family:monospace; margin-inline:auto; overflow:hidden;
-                white-space:nowrap; animation:typing 1.4s step-start infinite,
-                blink 2.6s steps(20) 1;
-                border-right: 3px solid; width:32.5ch;
-                overflow:hidden;
-            }
+/* Typewriter Effect */
+#typing_effect h1 {
+    font-family:monospace; margin-inline:auto; overflow:hidden;
+    white-space:nowrap; animation:typing 1.4s step-start infinite,
+    blink 2.6s steps(20) 1;
+    border-right: 3px solid; width:32.5ch;
+    overflow:hidden;
+}
 
-            @keyframes typing { /*gives a unique typing effect*/
-                50% {
-                    border-color:transparent;
-                }
-            }
+@keyframes typing { /*gives a unique typing effect*/
+    50% {
+        border-color:transparent;
+    }
+}
 
-            @keyframes blink { /*allows the effect to blink from the left to right*/
-                from {
-                    width:0;
-                }
-                to {
-                    width:100%;
-                }
-            }
+@keyframes blink { /*allows the effect to blink from the left to right*/
+    from {
+        width:0;
+    }
+    to {
+        width:100%;
+    }
+}
 
-            /* Responsiveness (To configure the compatibility on other devices) */
-            @media only screen and (max-width: 600px) {
-                .nav_link {
-                    display: none;
-                }
-            }  
+/* Responsiveness (To configure the compatibility on other devices) */
+/* Mobile view */
+@media (max-width: 600px) {
+    .skills-container {
+        display:flex;
+        justify-content:space-between;
+        gap:3rem;
+        flex-direction:column;
+    }
+                            
+    #typing_effect h1 {
+        font-family:monospace; margin-inline:auto; overflow:hidden;
+        white-space:nowrap; animation:typing 1.4s step-start infinite,
+        blink 2.6s steps(20) 1;
+        border-right: 3px solid; width:32.5ch;
+        overflow:hidden; font-size:1.0rem; display:flex;
+        justify-content:space-between;
+    }
+
+    #picture_profile {
+        width:3%;
+        height:3%;
+        border-radius:50%;
+        border:3px solid white;
+        position:absolute; margin-left:10%;
+        transition: transform 0.3s ease; z-index:35;
+    }
+
+    textarea {
+        display:block; margin-top:10px; resize:none; width:40vh;
+    }
+
+    #home_link {
+        opacity:0;
+    }
+
+    #contacts_link {
+        opacity:0;
+    }
+
+    #about_link {
+        opacity:0;
+    }
+
+    #skills_link {
+        opacity:0;
+    }
+
+    #pfolio_link {
+        opacity:0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-rows: 110% 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .container {
+    max-width:1200vh; margin:auto; padding:10px; position:relative;
+    }
+
+    #nav_container {
+        padding-bottom:0; margin-bottom:0;
+    }
+
+    .container2 > div {
+        margin-left:0;
+    }
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .skills-container {
+        gap:3rem; justify-content:space-between;
+    }
+                    
+    #typing_effect h1 {
+        font-family:monospace; margin-inline:auto; overflow:hidden;
+        white-space:nowrap; animation:typing 1.4s step-start infinite,
+        blink 2.6s steps(20) 1;
+        border-right: 3px solid; width:32.5ch; left:0; position:absolute;
+        overflow:hidden; font-size:1.0rem; display:flex;
+        justify-content:space-between;
+    }
+
+    #picture_profile {
+        width:300px;
+        height:300px;
+        border-radius:50%;
+        border:5px solid white;
+        position:absolute; top:-45vh; right:10vh;
+        transition: transform 0.3s ease; z-index:35;
+    }
+
+    textarea {
+        display:block; margin-top:10px; resize:none; width:40vh;
+    }
+
+    #home_link {
+        opacity:0;
+    }
+
+    #contacts_link {
+        opacity:0;
+    }
+
+    #about_link {
+        opacity:0;
+    }
+
+    #skills_link {
+        opacity:0;
+    }
+
+    #pfolio_link {
+        opacity:0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-rows: 110% 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .container {
+        max-width:1200vh; margin:auto; padding:10px; position:relative;
+    }
+
+    #nav_container {
+        padding-bottom:0; margin-bottom:0;
+    }
+
+    .container2 > div {
+        margin-left:0;
+    }
+}
