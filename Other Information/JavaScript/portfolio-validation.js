@@ -7,49 +7,49 @@ function validateForm() {
         return false; // returns a false value
     }
                 
-    if (document.forms[0].firstName.value == "") {
+    if (document.forms[0].firstName.value == "") { // First name validation
         alert('First name cannot be empty!');
         e.preventDefault();
         return false;
     }
                 
-    if (document.forms[0].lastName.value == "") {
+    if (document.forms[0].lastName.value == "") { // Last name validation
         alert('Last name cannot be empty!');
         e.preventDefault();
         return false;
     }
 
-    if (document.forms[0].mobile.value == "") {
+    if (document.forms[0].mobile.value == "") { // Mobile validation
         alert('Please enter a valid mobile number.');
         e.preventDefault();
         return false;
     }
 
-    if (document.forms[0].message.value == "") {
+    if (document.forms[0].message.value == "") { // Default or spam message validation
         alert('Please enter a valid message to be sent.');
         e.preventDefault();
         return false;
     }
                 
-    if (document.forms[0].email.value = "") {
+    if (document.forms[0].email.value = "") { // E-mail validation
         alert('Email cannot be empty!');
         e.preventDefault();
         return false;
     }
 
-    if (document.forms[0].country.value = "") {
+    if (document.forms[0].country.value = "") { // Dropdown validation
         alert('Please select a country of residence!');
         e.preventDefault();
         return false;
     }
 
     // Input validation
-    if (document.forms[0].pword.value.length < 8 || document.forms[0].pword.value.length > 24) {
+    if (document.forms[0].pword.value.length < 8 || document.forms[0].pword.value.length > 24) { // Ensuring that the password standard for my website is between 8 to 24 characters
         alert('Passwords have to be between 8 to 24 characters!')
         return false;
     }
 
-    if (document.forms[0].message.value.length < 8) {
+    if (document.forms[0].message.value.length < 8) { // Check for spam messages
         alert('Please enter a valid message to be sent.');
         return false;
     }

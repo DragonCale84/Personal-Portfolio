@@ -3,7 +3,7 @@
 /* Website Structure */
 * { /*overall structure (applies to the entire webpage)*/
     margin:0; padding:0; box-sizing:border-box;
-    scroll-behavior:smooth;
+    scroll-behavior:smooth; /* Allows for smooth scrolling to be applied to the entire webpage when a button that moves somewhere is clicked */
 }
 
 body {
@@ -12,6 +12,7 @@ body {
     animation-timing-function:ease-in-out;
 }
 
+/* Declared only for the "section" tag areas of the webpage */
 section {
     padding: 100px 0;
     position: relative;
@@ -22,6 +23,7 @@ section {
     position:relative;
 }
 
+ /* Container for all possible division elements */
 .container {
     max-width:1200vh; margin:auto; padding:20px;
 }
@@ -48,10 +50,6 @@ section {
 #nav_container {
     display:flex; margin:auto;
     justify-content:space-between; align-items:center;
-}
-
-.links {
-
 }
 
 /* Home Section */
@@ -164,17 +162,19 @@ section {
     background: #da9d24;
 }
 
-/* Pseudo-classes for the skill links */
-.skills-container {
+/* Skills section container */
+.skills-container { 
     display:flex;
     justify-content:space-between;
 }
 
+/* Skill section flex-item */
 .skills-grid {
     writing-mode:horizontal-tb;
     flex-direction:row;
 }
 
+/* Pseudo-classes for the skill links */
 .skill_link:link {
     color:white;
 }
@@ -215,6 +215,7 @@ section {
     margin-top:5%;
 }
 
+/* The project's contents */
 #content_project {
     width: 250%;
     height: 200%;
@@ -257,14 +258,15 @@ footer {
     animation-play-state:paused;
 }
 
+/* Implemented enlarge keyframes for CSS interactivity */
 @keyframes enlarge {
-    50% {
+    50% { /* performs at 50% of the loop */
         border-radius:0; scale:1.25;
     }
-    90% {
+    90% {  /* performs at 90% of the loop */
         border-radius:50%; scale:1.15;
     }
-    100% {
+    100% {  /* performs at 100% of the loop */
         animation-timing-function:ease;
         animation-play-state:normal;
     }
@@ -377,6 +379,7 @@ textarea:valid {
     outline: 4px solid green; border-radius:3px;
 }
 
+/* CSS properties for the form's labels and input */
 label {
     display:block; float:left; clear:left; width:40%;
     text-align:right; padding-right:10px;
@@ -614,6 +617,7 @@ legend {
     top:5vh; right:3vh;
 }
 
+/* The span to draw out the lines of the ham menu */
 .ham-menu span {
     height:5px;
     width:100%;
@@ -626,6 +630,8 @@ legend {
     transition: 0.3s ease;
 }
 
+/* Structural pseudo-classes used to apply specific styles and translations to each child */
+
 .ham-menu span:nth-child(1) {
     top:25%;
 }
@@ -634,6 +640,7 @@ legend {
     top:75%;
 }
 
+/* This allows JavaScript to interact with the active class using querySelectors to allow translation to run */
 .ham-menu.active span:nth-child(1) {
     top:50%;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -701,12 +708,14 @@ legend {
     overflow:hidden;
 }
 
+/* Applied typing keyframes for a unique effect */
 @keyframes typing { /*gives a unique typing effect*/
     50% {
         border-color:transparent;
     }
 }
 
+/* Allows a special cursor blink effect to follow the typing sequence */
 @keyframes blink { /*allows the effect to blink from the left to right*/
     from {
         width:0;
@@ -718,8 +727,7 @@ legend {
 
 /* Responsiveness (To configure the compatibility on other devices) */
 /* Mobile view */
-
-@media (max-width: 600px) {
+@media (max-width: 600px) { /* Uses max-width for better functionality practices for mobile view prioritization */
     .skills-container {
         display:flex;
         justify-content:space-between;
@@ -790,7 +798,6 @@ legend {
 }
 
 /* Tablet view */
-
 @media (max-width: 768px) {
     .skills-container {
         gap:3rem; justify-content:space-between;

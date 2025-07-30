@@ -4,22 +4,22 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ethan Soong - Web Developer and Programmer</title>
-        <link rel="stylesheet" href="./Other Information/CSS/portfolio-website.css">
-        <script src="./Other Information/JavaScript/portfolio-validation.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ensures that the viewport is scaled evenly across most devices-->
+        <title>Ethan Soong - My Personal Portfolio</title> <!--Title of the web page that displays on the tab header-->
+        <link rel="stylesheet" href="./Other Information/CSS/portfolio-website.css"> <!--External stylesheet-->
+        <script src="./Other Information/JavaScript/portfolio-validation.js"></script> <!--External JavaScript file for portfolio validation-->
     </head>
 
     <body>
-        <!--Page Layout Background for the header-->
+        <!--Page Layout background for the header-->
         <header>
-            <div class="background"></div>
+            <div class="background"></div> <!--Overall configured background menu-->
         </header>
 
         
         <!--Off screen hamburger menu which goes before navigation-->
         <div class="off-screen-menu">
-            <ul class="off-screen">
+            <ul class="off-screen"> <!--Link contents that will be inside the hamburger menu-->
                 <li class="link"><a href="#homepage" id="home_link2"">Home</a></li>
                 <li class="link"><a href="#about_me" id="about_link2">About Me</a></li>
                 <li class="link"><a href="#skills" id="skills_link2">Skills</a></li>
@@ -30,16 +30,17 @@
         <!--Nav links for website navigation-->
         <nav class="scrolled">
             <div class="container">
+                <!--Spans for the hamburger menu-->
                 <div class="ham-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <div id="nav_container">
+                <div id="nav_container"> <!--Uses the nav container-->
                     <div class="logo" id="typing_effect">
                         <h1 class="logo">Ethan Soong's Personal Portfolio</h2>
                     </div>
-                    <ul class="nav_link">
+                    <ul class="nav_link"> <!--Links on the top of the navigation menu-->
                         <li class="link"><a href=#homepage id="home_link">Home</a></li>
                         <li class="link"><a href=#about_me id="about_link">About Me</a></li>
                         <li class="link"><a href=#skills id="skills_link">My Skills</a></li>
@@ -54,7 +55,7 @@
         <!--Home Page-->
         <div id="homepage">
             <main id="home">
-                <div id="home-content">
+                <div id="home-content"> <!--Applies the use of spans to edit certain parts of the section-->
                     <h1>Web Developer and <span id="color2">Software Programmer</span></h1>
                     <p>I'm a web developer who aspires to build robust, accessible, and user-friendly digital softwares and browsers for my customers and audiences</p>
                     <a href="#about_me" id="home-button">Find Out More About Me!</a>
@@ -65,16 +66,16 @@
 
         <!--About Me-->
         <section id="about_me" class="about">
-            <div class="container">
+            <div class="container"> <!--Using the overall container-->
                 <h2 class="header">About Me</h2>
                 <div class="content">
-                    <div class="text">
+                    <div class="text"> <!--Information about myself-->
                         <p>I'm a dedicated programmer and passionate web developer who loves transforming my codes and product ideas into functional browser experiences for my users.</p><br>
                         <p>When I'm away from coding, you can usually find me exploring countless ways and unique methods to make my web browsers more user-friendly towards for my needing customers.</p>
                     </div>
                 </div>
                 <div class="about_image">
-                    <div id="picture_profile">
+                    <div id="picture_profile"> <!--Profile picture is to be added-->
                         <img src="./Images/myPicture.png" alt="My Profile Picture" style="margin-top:18px">
                     </div>
                 </div>
@@ -88,7 +89,6 @@
                 <h2 class="header" style="padding:20px;">My Portfolio of Skills</h2>
                 <!--Skills flexboxes goes here-->
                 <div class="skills-container">
-                    <!--Possible Git links to each project initiated-->
                     <div class="skills-grid card">
                         <h3 style="padding-bottom:15px; color:black; font-weight:bold;">Structural Programming</h3>
                         <p>Semantics of HTML5, CSS, JavaScript</p>
@@ -112,16 +112,17 @@
                 <div style="margin-left:13%;">
                     <div><h2 class="header2">My Projects and Overall Portfolio</h2></div>
                     <div class="project-container">
-                        <div id="content_project">
+                        <div id="content_project"> <!--Possible Git links to each project initiated-->
                             <h3 style="font-size:1.4em; text-align:center; color:black">Frontend Development - HTML, CSS and JavaScript</h3>
-                            <h3 style="font-size:1.2em; text-align:center"><a href="https://github.com/DragonCale84/Personal-Portfolio.git" class="skill_link"><h3 style="padding-bottom:15px;">Course Registration System</h3></a></h3>
+                            <h3 style="font-size:1.2em; text-align:center"><a href="https://github.com/DragonCale84/Personal-Portfolio.git" class="skill_link"><h3 style="padding-bottom:15px;">Personal Portfolio</h3></a></h3>
                             <p>A solo project that was worked on for weeks after weeks in achieving<br>its final phase, including the feature of cross-platform compatibilities</p>
                         </div>
                         <div id="content_project">
                             <h3 style="font-size:1.4em; text-align:center; color:black">Backend Development - Python</h3>
-                            <h3 style="font-size:1.2em; text-align:center"><a href="https://github.com/DragonCale84/Course-Registration-System.git" class="skill_link"><h3 style="padding-bottom:15px;">Personal Portfolio</h3></a></h3>
+                            <h3 style="font-size:1.2em; text-align:center"><a href="https://github.com/DragonCale84/Course-Registration-System.git" class="skill_link"><h3 style="padding-bottom:15px;">Course Registration System</h3></a></h3>
                             <p>A collaborative project in constructing a course registration system for student usability in educational institutions<br></p>
                         </div>
+                        <!--Added line breaks to add a gapping space between the projects and the contacts section-->
                         <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
                     </div>
                 </div>
@@ -134,31 +135,32 @@
             <div class="forms">
                 <h2>Contact Us!</h2>
                 <p><span style="font-weight:bold">Ready to bring your ideas to life?</span> Sign up now and drop us a message! We would really love to hear about you.<br>Your time and feedback is valuable in helping us improve. Thanks!</p>
-                <!--Forms start here-->
+                <!--Forms to return the input validation check if all information is validated-->
                 <form action="./Other Information/submitted-form.html" method="post" onsubmit="return validateForm();">
                     <fieldset>
-                    <legend>Contact Information</legend>
-                        <div>
+                    <legend>Contact Information</legend> <!--Legend displays the contact information description-->
+                        <!--Prompts the user for their information through forms if they want to send feedback-->
+                        <div> <!--Gets user first name-->
                             <label for="firstName"><span class="bold_std">F</span>irst Name: </label>
                             <input type="text" name ="firstName" id="firstName" required accesskey="f" tabindex="1">
                         </div>
-                        <div>
+                        <div> <!--Gets user last name-->
                             <label for="lastName"><span class="bold_std">L</span>ast Name: </label>
                             <input type="text" name ="lastName" id="lastName" required accesskey="l" tabindex="1">
                         </div>
-                        <div>
+                        <div> <!--Get user's mobile number-->
                             <label for="mobile"><span class="bold_std">M</span>obile Number: </label>
                             <input type="tel" name="mobile" id="mobile" required accesskey="n" tabindex="2">
                         </div>
-                        <div>
+                        <div> <!--Get user's e-mail-->
                             <label for="email"><span class="bold_std">E</span>-mail: </label>
                             <input type="email" name="email" id="email" required accesskey="e" tabindex="3">
                         </div>
-                        <div>
+                        <div> <!--Get user password-->
                             <label for="pword"><span class="bold_std">P</span>assword: </label>
                             <input type="password" name="pword" id="pword" required accesskey="p" tabindex="4" minlength="8">
                         </div>
-                        <div>
+                        <div> <!--Dropdown list to select a country-->
                             <label for="country"><span class="bold_std">C</span>ountry of Residence: </label>
                             <select size="1" name="country" class="country_dropdwn" id="country" required acceskey="c" tabindex="5">
                                 <option>Select your country of residence</option>
@@ -176,11 +178,11 @@
                                 <option value="Others">Others</option>
                             </select>
                         </div>
-                        <div>
+                        <div> <!--Sending a message-->
                             <label for="message"><span class="bold_std">M</span>essage: </label>
                             <textarea name="message" id="message" required accesskey="m" tabindex="6" rows="4" cols="40" minlength="20"></textarea>
                         </div>
-                        <div>
+                        <div> <!--Submit button to send final responses-->
                             <button type="submit" class="button" tabindex="7" accesskey="s">Submit Details</button>
                         </div>
                     </fieldset>
@@ -191,10 +193,10 @@
 
         <!--Footer for extra information and copyright reserves-->
         <footer>
-            <div class="container">
+            <div class="container"> <!--Copyright footer-->
                 <p>&copy; 2025 Ethan Soong. All rights are reserved. | Built with lots of passion and love in coding ☕</p>
             </div>
-        </footer>
+        </footer> <!--Another external script file to deploy the hamburger menu by the end of the page-->
         <script src="./Other Information/JavaScript/portfolio-ham-menu.js"></script>
     </body>
 
